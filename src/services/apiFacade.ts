@@ -37,7 +37,6 @@ async function addCategory(newCategoryName: string): Promise<Array<string>> {
 }
 async function getRecipes(category: string | null): Promise<Array<Recipe>> {
   //if (recipes.length > 0) return [...recipes];
-  console.log("category", category);
   const queryParams = category ? "?category=" + category : "";
   return fetch(RECIPE_URL + queryParams).then(handleHttpErrors);
 }

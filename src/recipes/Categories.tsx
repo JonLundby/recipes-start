@@ -12,14 +12,6 @@ export const Categories = () => {
         getCategories().then((res) => setCategories(res));
     }, []);
 
-    // const handleAddCategory = () => {
-    //     if (categoryToAdd.length > 0) {
-    //         // setCategories([...categories, categoryToAdd]);
-    //         // setCategoryToAdd("");
-    //         // const newCategory = await addCategory(categoryToAdd);
-    //     }
-    // };
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (categoryToAdd.length > 0) {
