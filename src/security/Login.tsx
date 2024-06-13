@@ -19,8 +19,9 @@ const Login = () => {
         event.preventDefault();
 
         const formData = new FormData(event.currentTarget);
+        console.log(formData.get("username"));
         const user = Object.fromEntries(formData) as unknown as User;
-        
+        console.log(user);
 
         setErr(null);
         console.log(err);
